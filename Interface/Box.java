@@ -53,7 +53,10 @@ public class Box implements CanDo {
      * @param index - индекс удаляемого элемента
      */
     public void remove(int index) {
-        if (index > sweets.length - 1) {
+        if (sweets.length==0){
+            System.out.println("Коробочка пуста");
+        }
+        else if (index > sweets.length - 1) {
             System.out.println("Индекс массива слишком большой");
         } else if (index < 0) {
             System.out.println("Индекс массива отрицателен");
