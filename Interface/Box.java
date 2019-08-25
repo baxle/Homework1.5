@@ -107,7 +107,7 @@ public class Box implements CanDo {
     public void getAllInfo() {
         System.out.println("\nИнформация о всех сладостях в подарке:");
         for (Sweet sweet : sweets) {
-            System.out.println(sweet.toString());
+            System.out.println(sweet);
         }
         System.out.println(" ");
     }
@@ -123,7 +123,7 @@ public class Box implements CanDo {
             Comparator weightComparator = new MaxWeightComparator();
             Arrays.sort(sweets, weightComparator);
             for (Sweet sweet : sweets) {
-                System.out.println(sweet.toString());
+                System.out.println(sweet);
             }
 
 
@@ -155,7 +155,7 @@ public class Box implements CanDo {
             Comparator priceComparator = new MaxPriceComparator();
             Arrays.sort(sweets, priceComparator);
             for (Sweet sweet : sweets) {
-                System.out.println(sweet.toString());
+                System.out.println(sweet);
             }
 
 
