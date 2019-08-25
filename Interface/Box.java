@@ -84,7 +84,7 @@ public class Box implements CanDo {
     public BigDecimal getTotalWeight() {
         BigDecimal totalWeight = BigDecimal.valueOf(0.00);
         for (int i = 0; i < sweets.length; i++) {
-            totalWeight = totalWeight.add(BigDecimal.valueOf(sweets[i].price));
+            totalWeight = totalWeight.add(BigDecimal.valueOf(sweets[i].weight));
         }
         return totalWeight;
     }
@@ -119,7 +119,7 @@ public class Box implements CanDo {
         if (weight < 0) {
             System.out.println("Вы ввели отрицательный вес");
         } else {
-            BigDecimal x = getTotalPrice();
+            BigDecimal x = getTotalWeight();
             Comparator weightComparator = new MaxWeightComparator();
             Arrays.sort(sweets, weightComparator);
             for (Sweet sweet : sweets) {
